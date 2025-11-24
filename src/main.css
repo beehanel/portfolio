@@ -1,0 +1,310 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f7f7fb;
+    color: #222;
+}
+header {
+    background: #18181b;
+    color: #f9fafb;
+    padding: 2rem 1.5rem;
+}
+header h1 {
+    margin: 0 0 0.5rem 0;
+}
+header p {
+    margin: 0;
+    max-width: 720px;
+}
+nav {
+    background: #27272a;
+    padding: 0.5rem 1.5rem;
+}
+nav a {
+    color: #e4e4e7;
+    margin-right: 1rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    max-width: 70%;
+    margin: 2rem auto;
+    padding: 0 1.5rem 3rem;
+}
+section {
+    margin-bottom: 3rem;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.75rem 1.75rem 2rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+section h2 {
+    margin-top: 0;
+}
+.tagline {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+.highlight {
+    background: #eef2ff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem;
+}
+.two-col {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 1.5rem;
+}
+.placeholder {
+    border: 2px dashed #d4d4d8;
+    border-radius: 10px;
+    padding: 0.2rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+    background: #fafafa;
+    text-align: center;
+}
+.placeholder strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+.pill-label {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: #e5e7eb;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 0.5rem;
+}
+ul {
+    padding-left: 1.1rem;
+}
+li {
+    margin-bottom: 0.4rem;
+}
+.subheading {
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+.meta {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+a.link {
+    color: #2563eb;
+    text-decoration: none;
+}
+a.link:hover {
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    padding: 1.5rem 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+    header, nav, main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* DUCK TALES, waoo waoo */
+
+/* Duck tank container sits inside the projects-section */
+.duck-tank {
+  position: relative;
+  margin-top: 1.5rem;
+  height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #9ae6ff; /* night sky */
+}
+
+/* each duck is absolutely positioned and animated horizontally */
+.duck {
+  position: absolute;
+  bottom: 20%;
+  width: 240px;
+  height: 140px;
+  pointer-events: auto;
+  animation-name: duck-swim;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* duck body + head */
+.duck-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.duck-image-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.duck-bob-wrapper {
+  animation: duck-bob 2.4s ease-in-out infinite;
+}
+
+.duck-image {
+  width: 100%;
+  height: auto;
+  pointer-events: none; /* so clicks go to the ProjectCard */
+}
+
+.duck-inner {
+  position: absolute;
+  bottom: 20px;       /* distance from bottom of duck image */
+  left: 20px;         /* horizontal offset (move left/right on duck) */
+  width: 150px;       /* fixed width for text-fitting */
+  height: 110px;       /* shorter box since it's near bottom */
+  overflow: hidden;   /* required for auto-shrink */
+  display: flex;
+  align-items: flex-end; /* stick text to bottom */
+}
+
+.duck-text {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;    /* starting size; v-fit-text shrinks this */
+  line-height: 1.2;
+  text-align: left;   /* or center if you prefer */
+  padding-right: 35px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+/* make ProjectCard visually blend into the duck */
+.duck-inner .project-card {
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  color: #000;
+}
+
+.duck-inner .project-title {
+  font-size: 0.85rem;
+  margin-bottom: 0.15rem;
+}
+
+.duck-inner .project-description {
+  font-size: 0.7rem;
+  margin-bottom: 0.25rem;
+}
+
+.duck-inner .project-role {
+  font-size: 0.65rem;
+}
+
+.duck-inner .tag-pill {
+  font-size: 0.6rem;
+  padding: 0.05rem 0.25rem;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.duck-inner .project-link {
+  display: inline-block;
+  margin-top: 0.15rem;
+  font-size: 0.7rem;
+  text-decoration: underline;
+}
+
+/* when no projects match the filter */
+.duck-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+/* horizontal swimming animation: bounce between left and right edges */
+@keyframes duck-swim {
+  from {
+    left: 0px;
+  }
+  to {
+    left: calc(100% - 200px);
+  }
+}
+
+/* vertical bobbing to feel like floating */
+@keyframes duck-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.projects-header-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Toggle container */
+.view-toggle {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 2px;
+  background: #e5e7eb;
+}
+
+/* Toggle buttons */
+.view-toggle-btn {
+  border: none;
+  background: transparent;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+
+.view-toggle-btn.active {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.view-toggle-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Simple grid layout for normal view if you don't already have one */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
