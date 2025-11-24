@@ -4,7 +4,7 @@
       <div class="app-header-inner">
         <h1 class="site-title">B. Hanel</h1>
         <p class="site-subtitle">
-          Web and software developer. They/Them
+          Web and software developer
         </p>
       </div>
       <nav class="main-nav">
