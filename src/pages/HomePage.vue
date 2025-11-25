@@ -3,9 +3,7 @@
     <section class="intro-section">
       <h2>Overview</h2>
       <p>
-        I build interactive safety training in Unity, research discourse in learner writing,
-        and develop web tools like LexiConcordia. This site collects a few of those projects
-        in a more structured, interactive way.
+        Software and web developer specializing in interactive experiences. Several years of proven experience in Unity and web development.
       </p>
     </section>
 
@@ -65,10 +63,6 @@
     <section class="timeline-section">
       <h2>Timeline</h2>
       <Timeline :events="timelineEvents" />
-    </section>
-
-    <section class="tasks-section">
-      <TaskMatrixDemo />
     </section>
   </div>
 </template>
