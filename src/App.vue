@@ -12,6 +12,7 @@
         <RouterLink to="/unity-safety" class="nav-link">Unity Safety Tools</RouterLink>
         <RouterLink to="/discourse-research" class="nav-link">Discourse Research</RouterLink>
         <RouterLink to="/lexiconcordia" class="nav-link">LexiConcordia</RouterLink>
+		<RouterLink to="/imminent" class="nav-link">Imminent</RouterLink>
         <RouterLink to="/about" class="nav-link">About</RouterLink>
       </nav>
     </header>

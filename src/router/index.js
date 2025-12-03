@@ -5,6 +5,7 @@ import UnitySafetyPage from '../pages/UnitySafetyPage.vue';
 import DiscourseResearchPage from '../pages/DiscourseResearchPage.vue';
 import LexiConcordiaPage from '../pages/LexiConcordiaPage.vue';
 import AboutPage from '../pages/AboutPage.vue';
+import ImminentPage from '../pages/ImminentPage.vue';
 
 const routes = [
   { path: '/', name: 'home', component: HomePage },
@@ -12,6 +13,7 @@ const routes = [
   { path: '/discourse-research', name: 'discourse-research', component: DiscourseResearchPage },
   { path: '/lexiconcordia', name: 'lexiconcordia', component: LexiConcordiaPage },
   { path: '/about', name: 'about', component: AboutPage },
+  { path: '/imminent', name: 'imminent', component: ImminentPage },
 ];
 
 const router = createRouter({

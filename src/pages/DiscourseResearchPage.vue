@@ -292,29 +292,60 @@
 			  </p>
 		  </section>
 
-		  <!-- Bulgaria Trip (you fill this in) -->
 		  <section id="bulgaria-trip">
-			  <div class="pill-label">Section 8</div>
 			  <h2>Trip to Bulgaria</h2>
 			  <p class="tagline">
-				  Reflections on presenting this work and experiencing Varna & beyond.
+				  I presented this work at RANLP in Varna, Bulgaria, which was an amazing experience!
 			  </p>
 
-			  <p>
-				  <!-- TODO: Replace this placeholder text with your own narrative. -->
-				  This section is reserved for my own write-up about travelling to Bulgaria to present this research:
-				  experiences at the conference, impressions of Varna, and how the trip connected to the work described above.
-			  </p>
+			  <!-- Slideshow Component Content -->
+			  <div class="slideshow-wrapper">
+				  <div class="slideshow">
+					  <img :src="bulgariaImages[currentIndex]" class="slide-img" />
+				  </div>
 
-			  <div class="placeholder">
-				  <!-- <img src="assets/varna.png" alt="Photos from Bulgaria" style="width:100%; border-radius:12px;"> -->
-        </div>
+				  <div class="slideshow-controls">
+					  <button @click="prevBulgaria">Previous</button>
+					  <button @click="nextBulgaria">Next</button>
+				  </div>
+			  </div>
 		  </section>
 
 	  </main>
   </div>
 </template>
 
-<script setup>
-import CollapsibleSection from '../components/CollapsibleSection.vue';
+<script setup="">
+	import { ref, onMounted, onBeforeUnmount } from "vue";
+	import CollapsibleSection from '../components/CollapsibleSection.vue';
+
+	// reactive image list
+	const bulgariaImages = [
+	new URL('../assets/bulgaria1.png', import.meta.url).href,
+	new URL('../assets/bulgaria2.png', import.meta.url).href,
+	new URL('../assets/bulgaria3.png', import.meta.url).href,
+	new URL('../assets/bulgaria4.png', import.meta.url).href
+	];
+
+	const currentIndex = ref(0);
+
+	// functions
+	function nextBulgaria() {
+	currentIndex.value = (currentIndex.value + 1) % bulgariaImages.length;
+	}
+
+	function prevBulgaria() {
+	currentIndex.value =
+	(currentIndex.value - 1 + bulgariaImages.length) % bulgariaImages.length;
+	}
+
+	function handleKey(e) {
+	if (e.key === "ArrowRight") nextBulgaria();
+	if (e.key === "ArrowLeft") prevBulgaria();
+	}
+
+	// lifecycle
+	onMounted(() => window.addEventListener("keydown", handleKey));
+	onBeforeUnmount(() => window.removeEventListener("keydown", handleKey));
 </script>
+

@@ -17,6 +17,14 @@
 
 	  <main>
 
+		  <section id="video-demo">
+				  <div>
+					  <div class="placeholder">
+						  <iframe width="100%" height="500" src="https://www.youtube.com/embed/fGo_18oat3Q?si=AP4gM579muZafafx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+					  </div>
+				  </div>
+		  </section>
+
 		  <!-- 1. Modularity / Editor Tool Demo -->
 		  <section id="editor-modularity">
 			  <h2>Modular Unity Editor Workflow: Custom Inspectors in Action</h2>
