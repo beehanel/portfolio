@@ -16,13 +16,67 @@
 	</nav>
 
 	<main>
+		  <section id="video-demo">
+				  <div>
+					  <div class="placeholder">
+						  <iframe width="100%" height="500" src="https://www.youtube.com/embed/fGo_18oat3Q?si=AP4gM579muZafafx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+					  </div>
+				  </div>
+		  </section>
 
-		<!-- 6. Technical Case Study -->
-		<section id="case-study">
-			<h2>Technical Case Study: Bioengineering and Civil Engineering Lab Safety Module</h2>
-			<p class="tagline">
-				End-to-end feature ownership: from lab visit to editor tooling to shipping a training module.
-			</p>
+		  <!-- 6. Technical Case Study -->
+		  <section id="case-study">
+			  <h2>Technical Case Study: Bioengineering Lab Safety Module</h2>
+			  <p class="tagline">
+				  End-to-end feature ownership: from lab visit to editor tooling to shipping a training module.
+			  </p>
+
+			  <div class="two-col">
+				  <div>
+					  <div class="subheading">Problem</div>
+					  <p>
+						  The bioengineering teaching lab needed consistent, engaging safety training that went beyond static
+						  manuals and slide decks. New students struggled to remember step-by-step procedures and lab-specific
+						  hazards.
+					  </p>
+
+					  <div class="subheading">Solution</div>
+					  <ul>
+						  <li>Interactive 3D VR/desktop module for lab safety procedures.</li>
+						  <li>Modular step system covering preparation, PPE, equipment use, cleanup, and emergency response.</li>
+						  <li>Custom editors that allow staff to update procedures without modifying scripts.</li>
+					  </ul>
+
+					  <div class="subheading">Editor Tooling</div>
+					  <ul>
+						  <li>Step authoring inspectors with text, audio, and action configuration.</li>
+						  <li>Reusable “station” prefabs wired into a central sequence controller.</li>
+						  <li>Editor-time validation to catch missing assets or unassigned references.</li>
+					  </ul>
+
+					  <div class="subheading">Outcome</div>
+					  <ul>
+						  <li>Positive feedback from grad students and lab assistants on usability and clarity.</li>
+						  <li>Reusable tooling now applied to multiple labs with minimal code changes.</li>
+						  <li>Foundation for analytics and SCORM integration to track completion and performance.</li>
+					  </ul>
+				  </div>
+
+				  <div>
+					  <div class="placeholder">
+						  <strong>IMAGE PLACEHOLDER</strong>
+						  <!-- Replace with <img src="images/bio-case-study-collage.png" alt="Bioengineering lab safety case study screenshots"> -->
+					  </div>
+				  </div>
+			  </div>
+		  </section>
+
+		  <!-- 1. Modularity / Editor Tool Demo -->
+		  <section id="editor-modularity">
+			  <h2>Modular Unity Editor Workflow: Custom Inspectors in Action</h2>
+			  <p class="tagline">
+				  A data-driven step system with custom inspectors that allows non-programmers to configure VR safety training.
+			  </p>
 
 			<div class="two-col">
 				<div>

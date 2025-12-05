@@ -47,10 +47,13 @@
 				  </div>
 				  <div>
 					  <div class="placeholder">
-						  <strong>IMAGE PLACEHOLDER</strong>
-						  Thumbnail or figure excerpt from the paper’s first page (title and abstract), or a stylized graphic
-						  representing argumentative essays and discourse relations.
-						  <!-- e.g. <img src="images/paper-cover.png" alt="Paper cover"> -->
+						  <a href="https://github.com/CLaC-Lab/discourse-parsers-and-agreement">
+  <img 
+    src="https://opengraph.githubassets.com/random/CLaC-Lab/discourse-parsers-and-agreement"
+    alt="Repo Preview Card"
+    style="max-width: 100%; border-radius: 6px;"
+  />
+</a>
 					  </div>
 				  </div>
 			  </div>
@@ -100,7 +103,7 @@
 					  <div class="subheading">Learner Corpora</div>
 					  <ul>
 						  <li>
-							  <strong>ICLE / ENCAIL-inspired dataset:</strong> Essays written by English learners, with
+							  <strong><a href="https://language.sakura.ne.jp/icnale/"> ICNALE dataset:</a></strong> Essays written by English learners, with
 							  metadata including proficiency information.
 						  </li>
 						  <li>
@@ -122,10 +125,11 @@
 				  </div>
 				  <div>
 					  <div class="placeholder">
-						  <strong>IMAGE PLACEHOLDER</strong>
-						  Reproduction or stylized version of the dataset statistics table (e.g., number of essays and tokens
-						  per CEFR level).
-						  <!-- e.g. <img src="images/dataset-table.png" alt="Dataset statistics by CEFR level"> -->
+						 <img src="../assets/icnale.png" alt="Motivation diagram" style="width: 100%">
+			  <p class="tagline">
+				  RST dependency tree visualized by D3.js using an A2-level essay from Ishikawa (2013),
+with satellites labelled with their RST relation.
+			  </p>
 					  </div>
 				  </div>
 			  </div>
@@ -292,29 +296,60 @@
 			  </p>
 		  </section>
 
-		  <!-- Bulgaria Trip (you fill this in) -->
 		  <section id="bulgaria-trip">
-			  <div class="pill-label">Section 8</div>
 			  <h2>Trip to Bulgaria</h2>
 			  <p class="tagline">
-				  Reflections on presenting this work and experiencing Varna & beyond.
+				  I presented this work at RANLP in Varna, Bulgaria, which was an amazing experience!
 			  </p>
 
-			  <p>
-				  <!-- TODO: Replace this placeholder text with your own narrative. -->
-				  This section is reserved for my own write-up about travelling to Bulgaria to present this research:
-				  experiences at the conference, impressions of Varna, and how the trip connected to the work described above.
-			  </p>
+			  <!-- Slideshow Component Content -->
+			  <div class="slideshow-wrapper">
+				  <div class="slideshow">
+					  <img :src="bulgariaImages[currentIndex]" class="slide-img" />
+				  </div>
 
-			  <div class="placeholder">
-				  <!-- <img src="assets/varna.png" alt="Photos from Bulgaria" style="width:100%; border-radius:12px;"> -->
-        </div>
+				  <div class="slideshow-controls">
+					  <button @click="prevBulgaria">Previous</button>
+					  <button @click="nextBulgaria">Next</button>
+				  </div>
+			  </div>
 		  </section>
 
 	  </main>
   </div>
 </template>
 
-<script setup>
-import CollapsibleSection from '../components/CollapsibleSection.vue';
+<script setup="">
+	import { ref, onMounted, onBeforeUnmount } from "vue";
+	import CollapsibleSection from '../components/CollapsibleSection.vue';
+
+	// reactive image list
+	const bulgariaImages = [
+	new URL('../assets/bulgaria1.png', import.meta.url).href,
+	new URL('../assets/bulgaria2.png', import.meta.url).href,
+	new URL('../assets/bulgaria3.png', import.meta.url).href,
+	new URL('../assets/bulgaria4.png', import.meta.url).href
+	];
+
+	const currentIndex = ref(0);
+
+	// functions
+	function nextBulgaria() {
+	currentIndex.value = (currentIndex.value + 1) % bulgariaImages.length;
+	}
+
+	function prevBulgaria() {
+	currentIndex.value =
+	(currentIndex.value - 1 + bulgariaImages.length) % bulgariaImages.length;
+	}
+
+	function handleKey(e) {
+	if (e.key === "ArrowRight") nextBulgaria();
+	if (e.key === "ArrowLeft") prevBulgaria();
+	}
+
+	// lifecycle
+	onMounted(() => window.addEventListener("keydown", handleKey));
+	onBeforeUnmount(() => window.removeEventListener("keydown", handleKey));
 </script>
+

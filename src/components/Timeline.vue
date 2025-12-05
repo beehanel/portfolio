@@ -9,6 +9,24 @@
       <div class="timeline-content">
         <h3>{{ event.title }}</h3>
         <p>{{ event.description }}</p>
+	  <!-- Show download link if file exists -->
+  	<a 
+ 	   v-if="event.file" 
+ 	   :href="event.file"
+ 	   download
+ 	   class="download-link"
+	  >
+	    Download PDF
+	  </a>
+	<!-- Show web link if file exists -->
+  	<a 
+ 	   v-if="event.link" 
+ 	   :href="event.link"
+ 	   class="web-link"
+	  >
+	    View Link
+	  </a>
+	<p>----------------------------------------------------------------------------------------</p>
       </div>
     </div>
   </div>

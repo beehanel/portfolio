@@ -30,9 +30,9 @@ export const projects = [
     id: 'imminent',
     title: 'Imminent',
     shortDescription: 'Unity-based game created for 2022 Ubisoft Game Lab competition.',
-    tech: ['Unity', 'C#', 'FMOD'],
-    tags: ['Unity', 'C#', 'FMOD'],
-    link: '/lexiconcordia',
+    tech: ['Unity', 'C#', 'FMOD', 'NLP', 'Python'],
+    tags: ['Unity', 'C#', 'FMOD', 'NLP', 'Python'],
+    link: '/imminent',
     role: 'Full-stack developer'
   }
 ];
