@@ -35,9 +35,9 @@
 				  <div>
 					  <div class="subheading">Problem</div>
 					  <p>
-						  The bioengineering teaching lab needed consistent, engaging safety training that went beyond static
-						  manuals and slide decks. New students struggled to remember step-by-step procedures and lab-specific
-						  hazards.
+						  The bioengineering teaching lab and environmental lab in the Civil Engineering department needed consistent, noticed static
+						  manuals and slide decks were not engaging enough to "digital native" learners of today, and many safety mistakes were seen
+						  in lab safety procedures. New students struggled to remember step-by-step procedures and lab-specific hazards.
 					  </p>
 
 					  <div class="subheading">Solution</div>
@@ -47,84 +47,36 @@
 						  <li>Custom editors that allow staff to update procedures without modifying scripts.</li>
 					  </ul>
 
+					  <div class="subheading">Creation Process</div>
+					  <ul>
+						  <li>Visited the real lab, took pictures, read existing safety manuals, and interviewed lab assistants to pinpoint the most common safety issues.</li>
+						  <li>Created virtual versions of lab assets using Autodesk Maya or pre-existing libraries (GrabCAD, Turbosquid, Google Sketchup Database) that are compatiblee with Unity FBX or OBJ format.</li>
+						  <li>Imported First Person Controller for navigation around virtual lab.</li>
+					  </ul>
+
 					  <div class="subheading">Editor Tooling</div>
 					  <ul>
+						  <li>Created a custom "instruction box" capable of being changed in-editor.</li>
 						  <li>Step authoring inspectors with text, audio, and action configuration.</li>
 						  <li>Reusable “station” prefabs wired into a central sequence controller.</li>
-						  <li>Editor-time validation to catch missing assets or unassigned references.</li>
 					  </ul>
 
 					  <div class="subheading">Outcome</div>
 					  <ul>
 						  <li>Positive feedback from grad students and lab assistants on usability and clarity.</li>
 						  <li>Reusable tooling now applied to multiple labs with minimal code changes.</li>
-						  <li>Foundation for analytics and SCORM integration to track completion and performance.</li>
+						  <li>Foundation for analytics and integration with MyCourses to track completion and performance.</li>
 					  </ul>
 				  </div>
 
 				  <div>
 					  <div class="placeholder">
-						  <strong>IMAGE PLACEHOLDER</strong>
-						  <!-- Replace with <img src="images/bio-case-study-collage.png" alt="Bioengineering lab safety case study screenshots"> -->
+						  <img src="../assets/bio-case-study-collage.png" alt="Bioengineering lab safety case study screenshots" style="width:100%; border-radius:12px;">
 					  </div>
 				  </div>
 			  </div>
 		  </section>
 
-		  <!-- 1. Modularity / Editor Tool Demo -->
-		  <section id="editor-modularity">
-			  <h2>Modular Unity Editor Workflow: Custom Inspectors in Action</h2>
-			  <p class="tagline">
-				  A data-driven step system with custom inspectors that allows non-programmers to configure VR safety training.
-			  </p>
-
-			<div class="two-col">
-				<div>
-					<div class="subheading">Problem</div>
-					<p>
-						The bioengineering teaching lab and environmental lab in the Civil Engineering department needed consistent, noticed static
-						manuals and slide decks were not engaging enough to "digital native" learners of today, and many safety mistakes were seen
-						in lab safety procedures. New students struggled to remember step-by-step procedures and lab-specific hazards.
-					</p>
-
-					<div class="subheading">Solution</div>
-					<ul>
-						<li>Interactive 3D VR/desktop module for lab safety procedures.</li>
-						<li>Modular step system covering preparation, PPE, equipment use, cleanup, and emergency response.</li>
-						<li>Custom editors that allow staff to update procedures without modifying scripts.</li>
-					</ul>
-
-					<div class="subheading">Creation Process</div>
-					<ul>
-						<li>Visited the real lab, took pictures, read existing safety manuals, and interviewed lab assistants to pinpoint the most common safety issues.</li>
-						<li>Created virtual versions of lab assets using Autodesk Maya or pre-existing libraries (GrabCAD, Turbosquid, Google Sketchup Database) that are compatiblee with Unity FBX or OBJ format.</li>
-						<li>Imported First Person Controller for navigation around virtual lab.</li>
-					</ul>
-
-					<div class="subheading">Editor Tooling</div>
-					<ul>
-						<li>Created a custom "instruction box" capable of being changed in-editor.</li>
-						<li>Step authoring inspectors with text, audio, and action configuration.</li>
-						<li>Reusable “station” prefabs wired into a central sequence controller.</li>
-					</ul>
-
-					<div class="subheading">Outcome</div>
-					<ul>
-						<li>Positive feedback from grad students and lab assistants on usability and clarity.</li>
-						<li>Reusable tooling now applied to multiple labs with minimal code changes.</li>
-						<li>Foundation for analytics and integration with MyCourses to track completion and performance.</li>
-					</ul>
-				</div>
-
-				<div>
-					<div class="placeholder">
-						<img src="../assets/bio-case-study-collage.png" alt="Bioengineering lab safety case study screenshots" style="width:100%; border-radius:12px;">
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- 1. Modularity / Editor Tool Demo -->
 		<section id="editor-modularity">
 			<h2>Modular Unity Editor Workflow: Custom Inspectors in Action</h2>
 			<p class="tagline">
@@ -351,10 +303,6 @@
 				<li>AI automatically generates localized text and narration drafts.</li>
 				<li>AI configures interaction logic templates for new equipment.</li>
 			</ul>
-
-			<div class="placeholder">
-				<img src="../assets/ai-authoring-flow.svg" alt="Showcasing of custom editor menus" style="width:100%; border-radius:12px;">
-			</div>
 		</section>
 
 	</main>
