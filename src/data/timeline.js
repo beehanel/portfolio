@@ -1,4 +1,5 @@
 import RANLP from '../assets/RANLP.pdf';
+import COM from '../assets/COM.pdf';
 
 export const timelineEvents = [
   {
@@ -17,6 +18,12 @@ export const timelineEvents = [
     title: 'Recent Advances in Natural Language Processing (RANLP) - Varna, Bulgaria',
     description: 'Presented discourse analysis work in Bulgaria.',
     file: RANLP
+  },
+  {
+    year: 'August 2024',
+    title: 'Annual Conference of Metallurgists (COM) - Halifax, Nova Scotia',
+    description: 'Co-wrote Virtual Reality and Sim-to-Real Development of Metallurgical Operations, a pedagogical look at my Unity-based work in mineral processor co-op safety training',
+    file: COM
   },
   {
     year: 'November 2024',
