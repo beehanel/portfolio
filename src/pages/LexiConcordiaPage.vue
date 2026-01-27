@@ -2,7 +2,7 @@
     <div class="page lexiconcordia-page">
         <h2>LexiConcordia: Bilingual Engineering Terminology Portal</h2>
         <p class="page-tagline">
-            A Vue-based web platform for managing bilingual engineering lexicons across Concordia''s Faculty of Engineering.
+            A Vue-based web platform for managing bilingual engineering lexicons across Concordia's Department of French Studies
         </p>
 
         <nav>
