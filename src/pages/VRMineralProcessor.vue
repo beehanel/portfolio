@@ -2,7 +2,7 @@
   <div class="page unity-safety-page">
     <h2>VR Mineral Processor</h2>
     <p class="page-tagline">
-      Modular, data-driven lab safety training for multiple engineering departments, using Unity and VR/desktop builds.
+      If practice makes perfect, how great would it be if employees could take multiple visual tours of their new workplace before setting foot in it?
     </p>
 
 	<nav>
