@@ -3,7 +3,7 @@
     <section class="intro-section">
       <h2>Overview</h2>
       <p>
-        Software and web developer specializing in interactive experiences. Several years of proven experience in Unity and web development.
+        Software developer and game/UX designer specializing in interactive experiences. Several years of proven experience in Unity.
       </p>
     </section>
 
