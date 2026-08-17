@@ -18,7 +18,7 @@
 		  <section id="video-demo">
 				  <div>
 					  <div class="placeholder">
-						  <div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 60.7778%; padding-top: 120px;"><a href="https://www.innovation.ca/projects-results/research-stories/Industry-4.0-mining" data-iframely-url="https://iframely.net/HTLWx1cb?theme=dark"></a></div></div><script async src="https://iframely.net/embed.js"></script>
+						  <div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 60.7778%; padding-top: 120px;"><a href="https://www.innovation.ca/projects-results/research-stories/Industry-4.0-mining" data-iframely-url="https://iframely.net/HTLWx1cb?theme=dark"></a></div></div>
 					  </div>
 				  </div>
 		  </section>
@@ -135,5 +135,16 @@
 </template>
 
 <script setup>
-import CollapsibleSection from '../components/CollapsibleSection.vue';
+	import CollapsibleSection from '../components/CollapsibleSection.vue';
+
+    import { onMounted } from 'vue';
+
+    onMounted(() => {
+        if (!document.querySelector('script[src="https://iframely.net/embed.js"]')) {
+            const script = document.createElement('script');
+            script.src = 'https://iframely.net/embed.js';
+            script.async = true;
+            document.body.appendChild(script);
+        }
+    });
 </script>

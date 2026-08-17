@@ -1,13 +1,15 @@
-﻿<template>
-  <article class="project-card">
-    <h3 class="project-title">{{ project.title }}</h3>
+﻿<<template>
+  <RouterLink
+    :to="project.link"
+    class="project-card"
+  >
+    <h3 class="project-title">
+      {{ project.title }}
+    </h3>
+
     <p class="project-description">
       {{ project.shortDescription }}
     </p>
-
-    <div class="project-meta">
-      <span class="project-role">{{ project.role }}</span>
-    </div>
 
     <div class="project-tags">
       <span
@@ -15,24 +17,20 @@
         :key="tag"
         class="tag-pill"
       >
-        {{ tag }},
+        {{ tag }}
       </span>
     </div>
 
-    <RouterLink
-      v-if="project.link"
-      :to="project.link"
-      class="project-link"
-    >
-      View details
-    </RouterLink>
-  </article>
+    <p class="project-role">
+      {{ project.role }}
+    </p>
+  </RouterLink>
 </template>
 
 <script setup>
 import { RouterLink } from 'vue-router';
 
-const props = defineProps({
+defineProps({
   project: {
     type: Object,
     required: true
