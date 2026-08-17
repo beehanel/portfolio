@@ -5,14 +5,14 @@
 		Game created for Ubisoft's 2022 Game Lab competition alongside Chrysoula Skalkogiannis, Antoine Dufour-Blain, Runze Zhu, Elijah Mon, Meghan Cullen, Chuanyan Hu, Andréanne Chartrand-Beaudry. Game was nominated for best art direction and best game design.
 	</p>
 
-	  <nav>
-		  <a href="#gameplay-video">Gameplay Video</a>
-		  <a href="#early-prototyping">Early Prototyping</a>
-		  <a href="#general-gameplay-summary">General Gameplay Summary</a>
-		  <a href="#core-unity-architechture">Unity Architechture</a>
-		  <a href="#fmod">FMOD</a>
-		  <a href="#natural-language-processing">Natural Language Processing</a>
-	  </nav>
+	<nav class="project-nav">
+		<a href="#gameplay-video">Gameplay Video</a>
+		<a href="#early-prototyping">Early Prototyping</a>
+		<a href="#general-gameplay-summary">General Gameplay Summary</a>
+		<a href="#core-unity-architechture">Unity Architechture</a>
+		<a href="#fmod">FMOD</a>
+		<a href="#natural-language-processing">Natural Language Processing</a>
+	</nav>
 
 	  <main>
 

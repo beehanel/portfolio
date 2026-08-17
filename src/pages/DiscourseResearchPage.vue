@@ -5,16 +5,16 @@
       Linking CEFR proficiency levels to discourse relation usage in learner writing.
     </p>
 
-	  <nav>
-		  <a href="#overview">Overview</a>
-		  <a href="#motivation">Motivation & Background</a>
-		  <a href="#datasets">Datasets & CEFR Levels</a>
-		  <a href="#methodology">Methodology</a>
-		  <a href="#rst-findings">RST-Based Findings</a>
-		  <a href="#pdtb-findings">PDTB & Cross-Framework Patterns</a>
-		  <a href="#implications">Implications</a>
-		  <a href="#bulgaria-trip">Bulgaria Trip</a>
-	  </nav>
+	<nav class="project-nav">
+		<a href="#overview">Overview</a>
+		<a href="#motivation">Motivation & Background</a>
+		<a href="#datasets">Datasets & CEFR Levels</a>
+		<a href="#methodology">Methodology</a>
+		<a href="#rst-findings">RST-Based Findings</a>
+		<a href="#pdtb-findings">PDTB & Cross-Framework Patterns</a>
+		<a href="#implications">Implications</a>
+		<a href="#bulgaria-trip">Bulgaria Trip</a>
+	</nav>
 
 	  <main>
 

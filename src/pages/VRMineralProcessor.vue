@@ -5,7 +5,7 @@
       If practice makes perfect, how great would it be if employees could take multiple visual tours of their new workplace before setting foot in it?
     </p>
 
-	<nav>
+	<nav class="project-nav">
 		<a href="#case-study">Technical Case Study</a>
 		<a href="#editor-modularity">Editor Modularity Demo</a>
 		<a href="#human-authoring">Human-Centered Authoring</a>

@@ -5,7 +5,7 @@
             A Vue-based web platform for managing bilingual engineering lexicons across Concordia's Department of French Studies
         </p>
 
-        <nav>
+        <nav class="project-nav">
             <a href="#overview">Project Overview</a>
             <a href="#tech-stack">Tech Stack</a>
             <a href="#frontend-progress">Front-End Progress</a>
