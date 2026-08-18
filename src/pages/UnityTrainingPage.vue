@@ -1,140 +1,303 @@
+```vue
 <template>
-  <div class="page unity-safety-page">
-    <h2>Unity-Based Virtual Safety Labs</h2>
+  <div class="page unity-training-page">
+
+    <h2>Unity Training for McGill Graduate Students</h2>
+
     <p class="page-tagline">
-      Modular, data-driven lab safety training for multiple engineering departments, using Unity and VR/desktop builds.
+      A project-based introductory Unity training designed to help graduate students
+      confidently modify and extend existing engineering simulation projects.
     </p>
 
-	<nav class="project-nav">
-		<a href="#case-study">Technical Case Study</a>
-		<a href="#editor-modularity">Editor Modularity Demo</a>
-		<a href="#human-authoring">Human-Centered Authoring</a>
-		<a href="#editor-tools-packages">Editor Tools & Packages</a>
-		<a href="#editor-tooling-overview">Editor Tooling Overview</a>
-		<a href="#workflow-video">Editor Workflow Video</a>
-		<a href="#ai-readiness">AI Readiness</a>
-	</nav>
+    <nav class="project-nav">
+      <a href="#overview">Overview</a>
+      <a href="#starter-scene">Starter Scene</a>
+      <a href="#training-structure">Training Structure</a>
+      <a href="#outcome">Training Outcome</a>
+    </nav>
 
-	<main>
-		  <section id="video-demo">
-				  <div>
-					  <div class="placeholder">
-						  <iframe width="100%" height="500" src="https://www.youtube.com/embed/fGo_18oat3Q?si=AP4gM579muZafafx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-					  </div>
-				  </div>
-		  </section>
+    <main>
 
-		  <!-- 6. Technical Case Study -->
-		  <section id="case-study">
-			  <h2>Technical Case Study: Bioengineering Lab Safety Module</h2>
-			  <p class="tagline">
-				  End-to-end feature ownership: from lab visit to editor tooling to shipping a training module.
-			  </p>
+      <!-- =====================================================
+           OVERVIEW
+           ===================================================== -->
 
-			  <div class="two-col">
-				  <div>
-					  <div class="subheading">Problem</div>
-					  <p>
-						  The bioengineering teaching lab and environmental lab in the Civil Engineering department needed consistent, noticed static
-						  manuals and slide decks were not engaging enough to "digital native" learners of today, and many safety mistakes were seen
-						  in lab safety procedures. New students struggled to remember step-by-step procedures and lab-specific hazards.
-					  </p>
+      <section id="overview">
 
-					  <div class="subheading">Solution</div>
-					  <ul>
-						  <li>Interactive 3D VR/desktop module for lab safety procedures.</li>
-						  <li>Modular step system covering preparation, PPE, equipment use, cleanup, and emergency response.</li>
-						  <li>Custom editors that allow staff to update procedures without modifying scripts.</li>
-					  </ul>
+        <h2>Training Overview</h2>
 
-					  <div class="subheading">Creation Process</div>
-					  <ul>
-						  <li>Visited the real lab, took pictures, read existing safety manuals, and interviewed lab assistants to pinpoint the most common safety issues.</li>
-						  <li>Created virtual versions of lab assets using Autodesk Maya or pre-existing libraries (GrabCAD, Turbosquid, Google Sketchup Database) that are compatiblee with Unity FBX or OBJ format.</li>
-						  <li>Imported First Person Controller for navigation around virtual lab.</li>
-					  </ul>
+        <p class="tagline">
+          Learning Unity by completing a small, concrete engineering task rather
+          than working through disconnected software exercises.
+        </p>
 
-					  <div class="subheading">Editor Tooling</div>
-					  <ul>
-						  <li>Created a custom "instruction box" capable of being changed in-editor.</li>
-						  <li>Step authoring inspectors with text, audio, and action configuration.</li>
-						  <li>Reusable “station” prefabs wired into a central sequence controller.</li>
-					  </ul>
+        <p>
+          This introductory training was designed for graduate students with little
+          or no previous Unity experience who may need to maintain, modify, or expand
+          existing engineering simulations.
+        </p>
 
-					  <div class="subheading">Outcome</div>
-					  <ul>
-						  <li>Positive feedback from grad students and lab assistants on usability and clarity.</li>
-						  <li>Reusable tooling now applied to multiple labs with minimal code changes.</li>
-						  <li>Foundation for analytics and integration with MyCourses to track completion and performance.</li>
-					  </ul>
-				  </div>
+        <p>
+          Rather than introducing Unity through an empty scene, the trainee begins
+          inside an existing virtual mineral-processing facility. The training then
+          walks them through adding a new piece of equipment and making it interactive.
+        </p>
 
-				  <div>
-					  <div class="placeholder">
-						  <img src="../assets/bio-case-study-collage.png" alt="Bioengineering lab safety case study screenshots" style="width:100%; border-radius:12px;">
-					  </div>
-				  </div>
-			  </div>
-		  </section>
+        <div class="highlight">
+          <strong>Training goal:</strong>
+          by the end of the session, the trainee has added a SAG or Ball Mill to an
+          existing Unity scene, configured its movement, and created an interactive
+          information board for it.
+        </div>
 
-		<section id="editor-modularity">
-			<h2>Modular Unity Editor Workflow: Custom Inspectors in Action</h2>
-			<p class="tagline">
-				A data-driven step system with custom inspectors that allows non-programmers to configure VR safety training.
-			</p>
+      </section>
 
-			<div class="two-col">
-				<div>
-					<p>
-						In my lab safety projects, each training sequence is built from modular "steps" and "stations".
-						Professors and lab assistants can configure:
-					</p>
-					<ul>
-						<li>Step name and description (e.g., “Clear broken glass safely”).</li>
-						<li>Associated narration audio (mp3 selection in the inspector).</li>
-						<li>On-screen instructional text and prompts.</li>
-						<li>Required player action (pick up, dispose, lock object in place, etc.).</li>
-						<li>Post-actions in the 3D scene (enable/disable objects, spawn effects, update UI).</li>
-					</ul>
 
-					<p>
-						All of these are exposed through custom Unity Editor inspectors. The underlying C# remains stable,
-						while content and logic can be modified quickly through data definitions. This reduces maintenance
-						cost and makes the project easy to extend across multiple labs and departments.
-					</p>
-				</div>
+      <!-- =====================================================
+           STARTER SCENE
+           ===================================================== -->
 
-				<div>
-					<div class="placeholder">
-						<img src="../assets/bio-custom-menus.gif" alt="Showcasing of custom editor menus" style="width:100%; border-radius:12px;">
-					</div>
-				</div>
-			</div>
-		</section>
+      <section id="starter-scene">
 
-		<!-- 2. Human-Centered Authoring -->
-		<section id="human-authoring">
-			<h2>Human-Centered Authoring Workflows</h2>
-			<p class="tagline">
-				Designed for professors and lab assistants first.
-			</p>
+        <h2>Starter Scene</h2>
 
-			<p>
-				A core goal of my work is to ensure that subject-matter experts can own their content without learning C#.
-				Professors and lab assistants use editor tools to:
-			</p>
-			<ul>
-				<li>Reorder or add new safety steps in a sequence.</li>
-				<li>Swap out panoramas to match their specific lab layout.</li>
-				<li>Attach new images or videos to context-sensitive hotspots.</li>
-				<li>Configure scoring rules or completion conditions for training modules.</li>
-			</ul>
-		</section>
+        <div class="two-col">
 
-	</main>
+          <div>
+
+            <p>
+              The trainee begins with a simplified version of the virtual mineral
+              processor.
+            </p>
+
+            <p>
+              The environment is already built and the player can move through it,
+              but the normal guided tour and multiple-choice interactions are removed.
+              The SAG/Ball Mill is also intentionally missing.
+            </p>
+
+            <p>
+              This gives the trainee a realistic project to work inside without
+              requiring them to understand the entire application at once.
+            </p>
+
+            <div class="subheading">By the end, the trainee will:</div>
+
+            <ol>
+              <li>Understand the basic Unity interface.</li>
+              <li>Find and prepare a Unity-compatible 3D model.</li>
+              <li>Add and position the model in an existing scene.</li>
+              <li>Make the equipment rotate during Play Mode.</li>
+              <li>Create a world-space information board.</li>
+              <li>Configure a clickable UI button.</li>
+            </ol>
+
+          </div>
+
+          <div>
+            <div class="placeholder">
+              <strong>Placeholder Image</strong>
+              <p>
+                Screenshot of the starter mineral-processor scene before the
+                SAG/Ball Mill is added.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           TRAINING STRUCTURE
+           ===================================================== -->
+
+      <section id="training-structure">
+
+        <h2>Training Structure</h2>
+
+        <p class="tagline">
+          Each stage introduces a small set of Unity concepts while contributing
+          directly to the finished exercise.
+        </p>
+
+        <div class="results-grid">
+
+
+          <div class="result-card">
+
+            <h3>1. Unity Orientation</h3>
+
+            <p>
+              A short introduction to the parts of the Unity Editor the trainee
+              will use throughout the exercise.
+            </p>
+
+            <ul>
+              <li>Scene View and Game View</li>
+              <li>Hierarchy</li>
+              <li>Inspector</li>
+              <li>Project / Assets window</li>
+              <li>GameObjects and Components</li>
+              <li>Saving scenes and projects</li>
+              <li>Navigating the Scene View</li>
+            </ul>
+
+          </div>
+
+          <div class="result-card">
+
+            <h3>3. Add a 3D model to the Scene</h3>
+
+            <p>
+              The trainee imports the selected model and integrates it into the
+              existing mineral-processing environment.
+            </p>
+
+            <ul>
+              <li>Drag assets into the scene.</li>
+              <li>Use Position, Rotation, and Scale.</li>
+              <li>Use the Move, Rotate, and Scale tools.</li>
+              <li>Organize the object in the Unity Hierarchy.</li>
+              <li>Adjust the model to an appropriate size and location.</li>
+            </ul>
+
+          </div>
+
+
+          <div class="result-card">
+
+            <h3>3. Make the Mill Rotate</h3>
+
+            <p>
+              A simple C# rotation script is provided so the trainee can focus on
+              understanding how scripts interact with GameObjects.
+            </p>
+
+            <ul>
+              <li>Add a script as a Component.</li>
+              <li>Adjust exposed values in the Inspector.</li>
+              <li>Enter Play Mode and observe the result.</li>
+              <li>Change rotation speed and other settings.</li>
+              <li>Repeat the edit → test workflow.</li>
+            </ul>
+
+          </div>
+
+
+          <div class="result-card">
+
+            <h3>4. Create an Information Board</h3>
+
+            <p>
+              The trainee creates a simple world-space interface next to the
+              equipment.
+            </p>
+
+            <ul>
+              <li>Canvas</li>
+              <li>World Space UI</li>
+              <li>Panels and Images</li>
+              <li>Text</li>
+              <li>Buttons</li>
+              <li>Positioning UI elements in 3D space</li>
+            </ul>
+
+            <div class="highlight">
+              <strong>Example:</strong><br>
+              SAG Mill — A semi-autogenous grinding mill reduces ore size using a
+              combination of the ore itself and steel grinding balls.
+            </div>
+
+          </div>
+
+
+          <div class="result-card">
+
+            <h3>5. Make the Button Work</h3>
+
+            <p>
+              The final exercise introduces Unity's event system through a simple
+              interactive OK button.
+            </p>
+
+            <ul>
+              <li>Add a provided script.</li>
+              <li>Find the Button's <code>OnClick()</code> event.</li>
+              <li>Connect the button to the intended action.</li>
+              <li>Hide the information board when clicked.</li>
+              <li>Test the completed interaction.</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           OUTCOME
+           ===================================================== -->
+
+      <section id="outcome">
+
+        <h2>Training Outcome</h2>
+
+        <div class="two-col">
+
+          <div>
+
+            <p>
+              The exercise is intentionally small enough to complete in a short
+              introductory training while touching several of the workflows a
+              new Unity user will repeatedly encounter.
+            </p>
+
+            <p>
+              Instead of finishing with an isolated tutorial scene, the trainee
+              leaves with a functional addition to an existing engineering
+              simulation.
+            </p>
+
+            <div class="subheading">Skills practiced</div>
+
+            <ul>
+              <li>Unity Editor navigation</li>
+              <li>3D asset sourcing and importing</li>
+              <li>Scene organization</li>
+              <li>Transforms and object placement</li>
+              <li>Components and basic C# integration</li>
+              <li>Play Mode testing</li>
+              <li>World-space UI</li>
+              <li>Unity button events</li>
+            </ul>
+
+            <div class="highlight">
+              The emphasis is not on teaching programming from scratch. It is on
+              giving researchers enough familiarity with Unity to understand,
+              test, and make practical changes to an existing simulation.
+            </div>
+
+          </div>
+
+          <div>
+            <div class="placeholder">
+              <strong>Placeholder Image</strong>
+              <p>
+                Screenshot of the completed scene showing the imported mill and
+                interactive information board.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
   </div>
 </template>
-
-<script setup>
-import CollapsibleSection from '../components/CollapsibleSection.vue';
-</script>
+```
