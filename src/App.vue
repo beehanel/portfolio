@@ -2,7 +2,7 @@
     <div class="app-root">
         <header class="app-header">
             <div class="app-header-inner">
-                <h1 class="site-title">B. Hanel</h1>
+                <h1 class="site-title">Blaise Hanel</h1>
                 <p class="site-subtitle">
                     Web and software developer
                 </p>
