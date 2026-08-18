@@ -1,150 +1,385 @@
 <template>
-  <div class="page unity-safety-page">
-    <h2>VR Mineral Processor</h2>
-    <p class="page-tagline">
-      If practice makes perfect, how great would it be if employees could take multiple visual tours of their new workplace before setting foot in it?
-    </p>
+    <div class="page mineral-processor-page">
 
-	<nav class="project-nav">
-		<a href="#case-study">Technical Case Study</a>
-		<a href="#editor-modularity">Editor Modularity Demo</a>
-		<a href="#human-authoring">Human-Centered Authoring</a>
-		<a href="#editor-tools-packages">Editor Tools & Packages</a>
-		<a href="#editor-tooling-overview">Editor Tooling Overview</a>
-		<a href="#workflow-video">Editor Workflow Video</a>
-	</nav>
+        <!-- =====================================================
+             HERO
+             ===================================================== -->
 
-	<main>
-		  <section id="video-demo">
-				  <div>
-					  <div class="placeholder">
-						  <div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 60.7778%; padding-top: 120px;"><a href="https://www.innovation.ca/projects-results/research-stories/Industry-4.0-mining" data-iframely-url="https://iframely.net/HTLWx1cb?theme=dark"></a></div></div>
-					  </div>
-				  </div>
-		  </section>
+        <section class="project-hero">
 
-		  <!-- 6. Technical Case Study -->
-		  <section id="case-study">
-			  <h2>Technical Case Study: Bioengineering Lab Safety Module</h2>
-			  <p class="tagline">
-				  End-to-end feature ownership: from lab visit to editor tooling to shipping a training module.
-			  </p>
+            <h2>Virtual Mineral Processing Training</h2>
 
-			  <div class="two-col">
-				  <div>
-					  <div class="subheading">Problem</div>
-					  <p>
-						  The bioengineering teaching lab and environmental lab in the Civil Engineering department needed consistent, noticed static
-						  manuals and slide decks were not engaging enough to "digital native" learners of today, and many safety mistakes were seen
-						  in lab safety procedures. New students struggled to remember step-by-step procedures and lab-specific hazards.
-					  </p>
+            <p class="page-tagline">
+                An interactive Unity simulation designed to help engineering students
+                connect mineral-processing theory with the environments and operations
+                they may later encounter in industry.
+            </p>
 
-					  <div class="subheading">Solution</div>
-					  <ul>
-						  <li>Interactive 3D VR/desktop module for lab safety procedures.</li>
-						  <li>Modular step system covering preparation, PPE, equipment use, cleanup, and emergency response.</li>
-						  <li>Custom editors that allow staff to update procedures without modifying scripts.</li>
-					  </ul>
+            <div class="project-summary-grid">
 
-					  <div class="subheading">Creation Process</div>
-					  <ul>
-						  <li>Visited the real lab, took pictures, read existing safety manuals, and interviewed lab assistants to pinpoint the most common safety issues.</li>
-						  <li>Created virtual versions of lab assets using Autodesk Maya or pre-existing libraries (GrabCAD, Turbosquid, Google Sketchup Database) that are compatiblee with Unity FBX or OBJ format.</li>
-						  <li>Imported First Person Controller for navigation around virtual lab.</li>
-					  </ul>
+                <div class="project-summary-item">
+                    <strong>Purpose</strong>
+                    <span>
+                        Prepare students for plant visits, internships, and industrial environments.
+                    </span>
+                </div>
 
-					  <div class="subheading">Editor Tooling</div>
-					  <ul>
-						  <li>Created a custom "instruction box" capable of being changed in-editor.</li>
-						  <li>Step authoring inspectors with text, audio, and action configuration.</li>
-						  <li>Reusable “station” prefabs wired into a central sequence controller.</li>
-					  </ul>
+                <div class="project-summary-item">
+                    <strong>Audience</strong>
+                    <span>
+                        Engineering students, instructors, and industrial trainees.
+                    </span>
+                </div>
 
-					  <div class="subheading">Outcome</div>
-					  <ul>
-						  <li>Positive feedback from grad students and lab assistants on usability and clarity.</li>
-						  <li>Reusable tooling now applied to multiple labs with minimal code changes.</li>
-						  <li>Foundation for analytics and integration with MyCourses to track completion and performance.</li>
-					  </ul>
-				  </div>
+                <div class="project-summary-item">
+                    <strong>Formats</strong>
+                    <span>
+                        Immersive VR and keyboard-and-mouse desktop simulation.
+                    </span>
+                </div>
 
-				  <div>
-					  <div class="placeholder">
-						  <img src="../assets/bio-case-study-collage.png" alt="Bioengineering lab safety case study screenshots" style="width:100%; border-radius:12px;">
-					  </div>
-				  </div>
-			  </div>
-		  </section>
+            </div>
 
-		<section id="editor-modularity">
-			<h2>Modular Unity Editor Workflow: Custom Inspectors in Action</h2>
-			<p class="tagline">
-				A data-driven step system with custom inspectors that allows non-programmers to configure VR safety training.
-			</p>
+        </section>
 
-			<div class="two-col">
-				<div>
-					<p>
-						In my lab safety projects, each training sequence is built from modular "steps" and "stations".
-						Professors and lab assistants can configure:
-					</p>
-					<ul>
-						<li>Step name and description (e.g., “Clear broken glass safely”).</li>
-						<li>Associated narration audio (mp3 selection in the inspector).</li>
-						<li>On-screen instructional text and prompts.</li>
-						<li>Required player action (pick up, dispose, lock object in place, etc.).</li>
-						<li>Post-actions in the 3D scene (enable/disable objects, spawn effects, update UI).</li>
-					</ul>
 
-					<p>
-						All of these are exposed through custom Unity Editor inspectors. The underlying C# remains stable,
-						while content and logic can be modified quickly through data definitions. This reduces maintenance
-						cost and makes the project easy to extend across multiple labs and departments.
-					</p>
-				</div>
+        <nav class="project-nav">
+            <a href="#video-demo">Presentation</a>
+            <a href="#why">Project Purpose</a>
+            <a href="#case-study">Case Study</a>
+            <a href="#applications">Applications</a>
+            <a href="#considerations">Practical Considerations</a>
+            <a href="#coverage">Featured Coverage</a>
+        </nav>
 
-				<div>
-					<div class="placeholder">
-						<img src="../assets/bio-custom-menus.gif" alt="Showcasing of custom editor menus" style="width:100%; border-radius:12px;">
-					</div>
-				</div>
-			</div>
-		</section>
 
-		<!-- 2. Human-Centered Authoring -->
-		<section id="human-authoring">
-			<h2>Human-Centered Authoring Workflows</h2>
-			<p class="tagline">
-				Designed for professors and lab assistants first.
-			</p>
+        <main>
 
-			<p>
-				A core goal of my work is to ensure that subject-matter experts can own their content without learning C#.
-				Professors and lab assistants use editor tools to:
-			</p>
-			<ul>
-				<li>Reorder or add new safety steps in a sequence.</li>
-				<li>Swap out panoramas to match their specific lab layout.</li>
-				<li>Attach new images or videos to context-sensitive hotspots.</li>
-				<li>Configure scoring rules or completion conditions for training modules.</li>
-			</ul>
-		</section>
+            <!-- =====================================================
+                 VIDEO
+                 ===================================================== -->
 
-	</main>
-  </div>
+            <section id="video-demo">
+
+                <div class="placeholder">
+
+                    <iframe
+                        width="100%"
+                        height="500"
+                        src="https://www.youtube.com/embed/DRvZd700OM4"
+                        title="Virtual Mineral Processor Presentation"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+
+                </div>
+
+                <p class="video-caption">
+                    This work was presented at Rochester Institute of Technology's
+                    Frameless Labs showcase in 2024.
+                </p>
+
+            </section>
+
+
+            <!-- =====================================================
+                 PROJECT PURPOSE
+                 ===================================================== -->
+
+            <section id="why">
+
+                <h2>Project Purpose</h2>
+
+                <p class="tagline">
+                    Some engineering concepts are difficult to fully understand
+                    without seeing the environment in which they are applied.
+                </p>
+
+                <div class="two-col">
+
+                    <div>
+
+                        <p>
+                            Students may learn about mineral-processing equipment and
+                            operations through lectures, diagrams, and equations while
+                            having limited opportunities to visit an operating processing
+                            facility.
+                        </p>
+
+                        <p>
+                            Access can be constrained by geography, cost, safety,
+                            scheduling, and the availability of industrial partners.
+                        </p>
+
+                        <p>
+                            This project explores virtual simulation as a supplemental
+                            teaching tool: giving students an opportunity to become
+                            familiar with the plant environment before encountering it
+                            during a field trip, internship, laboratory experience, or
+                            industrial placement.
+                        </p>
+
+                    </div>
+
+                    <div class="highlight">
+                        <strong>The educational goal:</strong>
+                        help students build a mental model of the plant before they
+                        encounter the real thing.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 CASE STUDY
+                 ===================================================== -->
+
+            <section id="case-study">
+
+                <h2>Case Study: Connecting Theory to the Plant</h2>
+
+                <p class="tagline">
+                    Using interactive simulation to bridge classroom instruction
+                    and real-world engineering environments.
+                </p>
+
+                <div class="subheading">Challenge</div>
+
+                <p>
+                    Understanding individual mineral-processing operations
+                    does not necessarily give students an intuitive understanding
+                    of how those operations fit together inside an industrial plant.
+                </p>
+
+
+                <div class="subheading">Approach</div>
+
+                <p>
+                    We developed a navigable virtual mineral-processing
+                    environment in which students could explore equipment,
+                    plant layout, and processes interactively.
+                </p>
+
+
+                <div class="subheading">Educational Goals</div>
+
+                <ul>
+                    <li>
+                        Visualize complex mineral-processing operations.
+                    </li>
+
+                    <li>
+                        Connect theoretical concepts with industrial applications.
+                    </li>
+
+                    <li>
+                        Prepare students for plant visits and internships.
+                    </li>
+
+                    <li>
+                        Allow students to revisit the environment as often as needed.
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <!-- =====================================================
+                 POTENTIAL APPLICATIONS
+                 ===================================================== -->
+
+            <section id="applications">
+
+                <h2>Potential Applications</h2>
+
+                <p class="tagline">
+                    The underlying idea extends beyond a virtual plant tour.
+                </p>
+
+                <div class="results-grid">
+
+                    <div class="result-card">
+                        <h3>Pre-Visit Preparation</h3>
+
+                        <p>
+                            Let students explore an industrial environment before
+                            a field trip so that more of the real visit can be spent
+                            understanding the process rather than orienting themselves.
+                        </p>
+                    </div>
+
+
+                    <div class="result-card">
+                        <h3>Course Visualization</h3>
+
+                        <p>
+                            Give students a spatial context for processes discussed
+                            in lectures, including unit operations and instrumentation.
+                        </p>
+                    </div>
+
+
+                    <div class="result-card">
+                        <h3>Operational Readiness</h3>
+
+                        <p>
+                            Allow trainees to repeatedly practice procedures and become
+                            familiar with an environment before working inside the facility.
+                        </p>
+                    </div>
+
+
+                    <div class="result-card">
+                        <h3>Rare or High-Risk Scenarios</h3>
+
+                        <p>
+                            Create controlled practice environments for situations that
+                            are important to understand but difficult or unsafe to reproduce
+                            frequently in real life.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 PRACTICAL CONSIDERATIONS
+                 ===================================================== -->
+
+            <section id="considerations">
+
+                <h2>Practical Considerations</h2>
+
+                <p class="tagline">
+                    The most immersive technology is not automatically the best
+                    delivery method for every course.
+                </p>
+
+                <div class="two-col">
+
+                    <div>
+
+                        <div class="subheading">Immersive VR</div>
+
+                        <p>
+                            VR can provide a stronger sense of presence and spatial
+                            understanding and may be particularly valuable when the
+                            physical environment itself is important to the learning goal.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="subheading">Desktop Simulation</div>
+
+                        <p>
+                            Keyboard-and-mouse versions require less specialized
+                            equipment, are less computationally demanding, and can be
+                            distributed to a much larger number of students.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="highlight">
+                    <strong>My approach:</strong>
+                    use simulation to complement lectures, laboratories, industrial
+                    visits, and instructor-led training rather than treating virtual
+                    experiences as an automatic replacement for them.
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 FEATURED COVERAGE
+                 ===================================================== -->
+
+            <section id="coverage">
+
+                <h2>Featured Coverage</h2>
+
+                <p class="tagline">
+                    The virtual mineral-processing work was featured by the
+                    Canada Foundation for Innovation as part of its coverage of
+                    Industry 4.0 research and education.
+                </p>
+
+                <div class="placeholder">
+
+                    <div class="iframely-embed">
+
+                        <div
+                            class="iframely-responsive"
+                            style="padding-bottom: 60.7778%; padding-top: 120px;"
+                        >
+                            <a
+                                href="https://www.innovation.ca/projects-results/research-stories/Industry-4.0-mining"
+                                data-iframely-url="https://iframely.net/HTLWx1cb?theme=dark"
+                            ></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 CALL TO ACTION
+                 ===================================================== -->
+
+            <section class="project-cta">
+
+                <h2>Interested in a Similar Simulation?</h2>
+
+                <p>
+                    I am interested in working with professors, laboratories, and
+                    engineering programs on short-term prototypes that explore how
+                    interactive simulation could support a specific course, laboratory,
+                    industrial process, or training problem.
+                </p>
+
+                <p>
+                    A prototype does not need to begin as a large VR project. It can
+                    start with a single environment, process, piece of equipment, or
+                    learning objective to determine whether the approach is useful.
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
 </template>
 
+
 <script setup>
-	import CollapsibleSection from '../components/CollapsibleSection.vue';
+import { onMounted } from 'vue';
 
-    import { onMounted } from 'vue';
+onMounted(() => {
+    if (
+        !document.querySelector(
+            'script[src="https://iframely.net/embed.js"]'
+        )
+    ) {
+        const script = document.createElement('script');
 
-    onMounted(() => {
-        if (!document.querySelector('script[src="https://iframely.net/embed.js"]')) {
-            const script = document.createElement('script');
-            script.src = 'https://iframely.net/embed.js';
-            script.async = true;
-            document.body.appendChild(script);
-        }
-    });
+        script.src = 'https://iframely.net/embed.js';
+        script.async = true;
+
+        document.body.appendChild(script);
+    }
+});
 </script>
