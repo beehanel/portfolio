@@ -94,7 +94,7 @@
                     </div>
 
                     <div>
-                        <iframe src="gtcasp.pdf" title="GET THE CAT A SCRATCHING POST"></iframe>
+                        <iframe src="../assets/gtcasp.pdf" title="GET THE CAT A SCRATCHING POST"></iframe>
                         
                         <p class="tagline">
                             Unauthorized AI Use: This material may not be used for AI/LLM training without permission. Unauthorized use of this material is subject to monitoring and may be identified through technical or other means.
