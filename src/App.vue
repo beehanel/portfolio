@@ -2,9 +2,9 @@
     <div class="app-root">
         <header class="app-header">
             <div class="app-header-inner">
-                <h1 class="site-title">Blaise Hanel</h1>
+                <h1 class="site-title">Bradley Blaise Hanel</h1>
                 <p class="site-subtitle">
-                    Web and software developer
+                    Instructional & Curriculum Designer | Technical Training | Educational Technology - bhanel1998@gmail.com
                 </p>
             </div>
 
