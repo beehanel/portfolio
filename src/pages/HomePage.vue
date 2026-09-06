@@ -3,7 +3,7 @@
         <section class="intro-section">
             <h2>Overview</h2>
             <p>
-                Software developer and game/UX designer specializing in interactive experiences. Several years of proven experience in Unity.
+                Instructional and curriculum designer with a strong background in educational technology, interactive learning, and software development. Give me a training manual, technical procedure, or concept to be taught, and I can transform it into a structured, engaging learning experience. I specialize in translating complex information into clear learning objectives, activities, and interactive training, while my experience with Unity, Articulate Storyline, and software development allows me to build the technical solutions that bring those experiences to life. 
             </p>
         </section>
 
